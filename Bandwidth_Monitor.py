@@ -15,7 +15,7 @@ import time
 #   plt.ylabel("Network Activity")
 
 
-def main():
+def network_stats():
     start = time.time()
     up_speed = psutil.net_io_counters().bytes_recv
     down_speed = psutil.net_io_counters().bytes_sent
@@ -59,4 +59,4 @@ def bytes_to_gb(value):
     return value * 8e-6
 
 
-main()
+network_stats()
